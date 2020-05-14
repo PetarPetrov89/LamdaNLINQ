@@ -23,7 +23,7 @@ namespace LamdaNLINQ_4
             }
 
             var newDogList = dogs.Select(
-                d => new { Age = d.Age, FirstLetter = d.Name[0] });
+                d => new { Age = d.Age, FirstLetter = d.Name[0] }).OrderBy(d => d.Age).ThenBy(d => d.FirstLetter);
 
             foreach (var newDog in newDogList)
             {
